@@ -1,4 +1,185 @@
-.ukedager{
-  text-align: center;
+
+body{
+  background-color: #00204a;
+
 }
 
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  width: 1500px;
+}
+
+.metimelogo{
+  text-align: center;
+  width: 1200px;
+  height: 40px;
+  color:#53a8b6;
+  background-color: #00204a;
+  margin: auto;
+}
+
+.uke{
+  color: #53a8b6;
+  margin-top: 40px;
+  margin-left: 12px;
+  margin-bottom: 40px;
+  margin-right: 15px;
+  border: none;
+  font-weight: bold;
+}
+
+.inUke {
+  width: 185px;
+  height: 25px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #00204a;
+  background-color: #53a8b6;
+  border: none;
+}
+
+.mNavn{
+  width: 500px;
+  height: 25px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #00204a;
+  background-color: #53a8b6;
+  border: none;
+  
+}
+
+.rectangle{
+  color:#00204a ;
+  height: 50px;
+  background-color: #00204a;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1500px;
+ 
+}
+
+.cell {
+  float: left;
+  height: 45px;
+  width: 130px;
+  text-align: center;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  margin-top: 0px;
+  background-color: #53a8b6;
+}
+
+.overCell{
+  float: left;
+  height: 45px;
+  width: 136px;
+  text-align: center;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 3px;
+  margin-top: 0px;
+  background-color: #00204a;
+}
+
+.miniCell{
+  float: left;
+  height: 22px;
+  width: 57px;
+  text-align: center;
+  margin-left: 4px;
+  margin-right: 3px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  background-color: #00204a;
+  color: #53a8b6;
+  padding-top: 4px;
+ 
+  
+}
+
+.midCell{
+  float: left;
+  height: 45px;
+  width: 63px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  background-color: #53a8b6;
+ 
+}
+
+.midCell1{
+  float: left;
+  height: 45px;
+  width: 63px;
+  margin-left: 3px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  background-color: #53a8b6;
+ 
+}
+
+.checkVanlig{
+  margin-top: 13px;
+  height: 20px;
+  width: 20px;
+  
+}
+
+.inDate{
+  width: 100px;
+  height: 15px;
+  text-align: center;
+  margin-top: 2px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.oNrmesse{
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.tid{
+  width: 80px;
+  height: 20px;
+  text-align: center;
+  margin-top: 11px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.matNok{
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 5px;
+
+}
+
+button{
+  height: 12px;
+  font-size: 6px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2px;
+}
