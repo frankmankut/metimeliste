@@ -83,8 +83,9 @@ function App() {
           </div>
           <div className='cell'>
             <form>
-              <input className='matNok' name='mat'></input>&nbsp;
-              NOK
+              <input type="text" className='matNok' name='matNok'></input>&nbsp;
+              <label htmlFor="matNok">NOK</label>
+              
             </form>
           </div>
         </div>
@@ -135,8 +136,8 @@ function App() {
           </div>
           <div className='cell'>
             <form>
-              <input className='matNok' name='mat'></input>&nbsp;
-             NOK
+              <input type="text" className='matNok' name='matNok'></input>&nbsp;
+              <label htmlFor="matNok">NOK</label>
             </form>
           </div>
         </div>
@@ -187,8 +188,8 @@ function App() {
           </div>
           <div className='cell'>
             <form>
-              <input className='matNok' name='mat'></input>&nbsp;
-              NOK
+              <input type="text" className='matNok' name='matNok'></input>&nbsp;
+              <label htmlFor="matNok">NOK</label>
             </form>
           </div>
         </div>
@@ -238,8 +239,8 @@ function App() {
           </div>
           <div className='cell'>
             <form>
-              <input className='matNok' name='mat'></input>&nbsp;
-              NOK
+              <input type="text" className='matNok' name='matNok'></input>&nbsp;
+              <label htmlFor="matNok">NOK</label>
             </form>
           </div>
         </div>
@@ -290,8 +291,8 @@ function App() {
           </div>
           <div className='cell'>
             <form>
-              <input className='matNok' name='mat'></input>&nbsp;
-              NOK
+              <input type="text" className='matNok' name='matNok'></input>&nbsp;
+              <label htmlFor="matNok">NOK</label>
             </form>
           </div>
         </div>
@@ -342,8 +343,8 @@ function App() {
           </div>
           <div className='cell'>
             <form>
-              <input className='matNok' name='mat'></input>&nbsp;
-              NOK
+              <input type="text" className='matNok' name='matNok'></input>&nbsp;
+              <label htmlFor="matNok">NOK</label>
             </form>
           </div>
         </div>
@@ -394,8 +395,8 @@ function App() {
           </div>
           <div className='cell'>
             <form>
-	            <input className='matNok' name='mat'></input>&nbsp;
-             NOK
+              <input type="text" className='matNok' name='matNok'></input>&nbsp;
+              <label htmlFor="matNok">NOK</label>
             </form>
           
           </div>
