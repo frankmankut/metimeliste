@@ -84,6 +84,22 @@ p {
   background-color: #53a8b6;
 }
 
+.cell1 {
+  float: left;
+  height: 45px;
+  width: 130px;
+  text-align: center;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  margin-top: 0px;
+  background-color: #53a8b6;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .overCell{
   float: left;
   height: 45px;
@@ -121,7 +137,10 @@ p {
   margin-bottom: 0px;
   margin-top: 0px;
   background-color: #53a8b6;
- 
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .midCell1{
@@ -133,7 +152,10 @@ p {
   margin-bottom: 0px;
   margin-top: 0px;
   background-color: #53a8b6;
- 
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .checkVanlig{
@@ -157,7 +179,7 @@ p {
   height: 30px;
   text-align: center;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
   margin-top: 5px;
 }
 
@@ -176,7 +198,7 @@ p {
   height: 30px;
   text-align: center;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
   margin-top: 5px;
 
 }

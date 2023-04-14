@@ -17,19 +17,19 @@ function MainInfo() {
             </div>
             <div className='rectangle'>
                 <div className='cell'><p>Dager i uke</p> <span>Dato</span></div>
-                <div className='cell'>Ordrenummer</div>
-                <div className='cell'>Messer</div>
-                <div className='cell'>Vanlig dag</div>
-                <div className='cell'>Starttid</div>
-                <div className='cell'>Sluttid</div>
-                <div className='cell'>Spisetid</div>
-                <div className='cell'>Fastlønn</div>
+                <div className='cell1'>Ordrenummer</div>
+                <div className='cell1'>Messer</div>
+                <div className='cell1'>Vanlig dag</div>
+                <div className='cell1'>Starttid</div>
+                <div className='cell1'>Sluttid</div>
+                <div className='cell1'>Spisetid</div>
+                <div className='cell1'>Fastlønn</div>
                 <div className='cell'>Overtid <br />
                     <div className='miniCell'>50%</div>
                     <div className='miniCell'>100%</div>
                 </div>
-                <div className='cell'>Helligdag</div>
-                <div className='cell'>Mat</div>
+                <div className='cell1'>Helligdag</div>
+                <div className='cell1'>Mat</div>
             </div>
         </>
 

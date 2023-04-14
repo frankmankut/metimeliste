@@ -82,8 +82,8 @@ function WeekDays(props) {
       <div className="cell">
         <input type="time" className="tid" name="sluttidtTid"></input>
       </div>
-      <div className="cell">{props.isChecked && props.spiseTid}</div>
-      <div className="cell">{props.isChecked && props.fastLonn}</div>
+      <div className="cell1">{props.isChecked && props.spiseTid}</div>
+      <div className="cell1">{props.isChecked && props.fastLonn}</div>
       <div className="overCell">
         <div className="midCell"></div>
         <div className="midCell1">{props.isChecked && props.overtidFull}</div>
