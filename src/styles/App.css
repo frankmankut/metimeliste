@@ -1,5 +1,4 @@
-
-body{
+body {
   background-color: #00204a;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -8,22 +7,22 @@ p {
   margin: 0px;
 }
 
-.container{
+.container {
   margin-left: auto;
   margin-right: auto;
   width: 1500px;
 }
 
-.metimelogo{
+.metimelogo {
   text-align: center;
   width: 1200px;
   height: 40px;
-  color:#53a8b6;
+  color: #53a8b6;
   background-color: #00204a;
   margin: auto;
 }
 
-.uke{
+.uke {
   color: #53a8b6;
   margin-top: 40px;
   margin-left: 12px;
@@ -46,7 +45,7 @@ p {
   margin-right: 85px;
 }
 
-.mNavn{
+.mNavn {
   width: 500px;
   height: 25px;
   text-align: center;
@@ -55,11 +54,10 @@ p {
   color: #00204a;
   background-color: #53a8b6;
   border: none;
-  
 }
 
-.rectangle{
-  color:#00204a ;
+.rectangle {
+  color: #00204a;
   height: 50px;
   background-color: #00204a;
   font-size: 15px;
@@ -69,7 +67,6 @@ p {
   margin-left: auto;
   margin-right: auto;
   width: 1500px;
- 
 }
 
 .cell {
@@ -117,7 +114,7 @@ p {
   color: red;
 }
 
-.overCell{
+.overCell {
   float: left;
   height: 45px;
   width: 136px;
@@ -129,7 +126,7 @@ p {
   background-color: #00204a;
 }
 
-.miniCell{
+.miniCell {
   float: left;
   height: 22px;
   width: 57px;
@@ -141,11 +138,9 @@ p {
   background-color: #00204a;
   color: #53a8b6;
   padding-top: 4px;
- 
-  
 }
 
-.midCell{
+.midCell {
   float: left;
   height: 45px;
   width: 63px;
@@ -160,7 +155,7 @@ p {
   align-items: center;
 }
 
-.midCell1{
+.midCell1 {
   float: left;
   height: 45px;
   width: 63px;
@@ -175,14 +170,13 @@ p {
   align-items: center;
 }
 
-.checkVanlig{
+.checkVanlig {
   margin-top: 13px;
   height: 20px;
   width: 20px;
-  
 }
 
-.inDate{
+.inDate {
   width: 100px;
   height: 15px;
   text-align: center;
@@ -191,7 +185,7 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.oNrmesse{
+.oNrmesse {
   width: 120px;
   height: 30px;
   text-align: center;
@@ -200,27 +194,25 @@ p {
   margin-top: 5px;
 }
 
-.tid{
+.tid {
   width: 80px;
   height: 20px;
   text-align: center;
   margin-top: 11px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  
 }
 
-.matNok{
+.matNok {
   width: 80px;
   height: 30px;
   text-align: center;
   font-weight: bold;
   font-size: 18px;
   margin-top: 5px;
-
 }
 
-button{
+button {
   height: 12px;
   font-size: 6px;
   font-weight: bold;
