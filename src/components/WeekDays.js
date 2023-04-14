@@ -1,76 +1,102 @@
-import '../styles/App.css';
-import uniqid from 'uniqid';
+import "../styles/App.css";
+import uniqid from "uniqid";
 function WeekDays(props) {
-    return (
+  function fastLonn() {
+    if (props.isChecked) {
+      if (
+        props.dayName === "Mandag" ||
+        props.dayName === "Tirsdag" ||
+        props.dayName === "Onsdag" ||
+        props.dayName === "Torsdag"
+      ) {
+        return "8";
+      } else if (props.dayName === "Fredag") {
+        return "5.5";
+      } else if (props.dayName === "Lørdag" || props.dayName === "Søndag") {
+        return "6.5";
+      }
+    }
+  }
+  function spiseTid() {
+    if (props.isChecked) {
+      if (props.dayName === "Lørdag" || props.dayName === "Søndag") {
+        return "0.5";
+      }
+    }
+  }
+  function overtidFull() {
+    if (props.isChecked) {
+      if (props.dayName === "Lørdag" || props.dayName === "Søndag") {
+        return "7"
+      }
+    }
+  }
+  return (
+    <div className="rectangle">
+      <div className="cell">
+        <span>{props.dayName}</span>
 
-        <div className='rectangle'>
-            <div className='cell'>
-                <span>{props.dayName}</span>
+        {props.dayIndex === 0 && (
+          <button
+            type="button"
+            onClick={() =>
+              props.addDay(props.dayName, {
+                isChecked: false,
+                id: uniqid(),
+                fastLonn: fastLonn(),
+                spiseTid: spiseTid(),
+                overtidFull: overtidFull(),
+              })
+            }
+          >
+            Legg til en linje
+          </button>
+        )}
 
-                {props.dayIndex === 0 &&
+        {props.dayIndex !== 0 && (
+          <button type="button" onClick={() => props.removeDay(props.dayName, props.id)}>
+            Slett linjen
+          </button>
+        )}
 
-                    <button type='button' onClick={() => props.addDay(props.dayName,{id: uniqid()})}>Legg til en linje</button>
-                }
-
-                {props.dayIndex !== 0 &&
-
-                    <button type='button' onClick={() => props.removeDay(props.dayName,props.id)}>Slett linjen</button>
-                }
-
-                <input className='inDate' name='Date' type="date" placeholder="dd/mm/yyyy" lang='no'></input>
-
-            </div>
-            <div className='cell'>
-
-                <input className='oNrmesse' name='oNumer'></input>
-
-            </div>
-            <div className='cell'>
-
-                <input className='oNrmesse' name='Messe'></input>
-
-            </div>
-            <div className='cell'>
-
-                <input type="checkbox" className='checkVanlig' name="Vanlig"></input>
-
-            </div>
-            <div className='cell'>
-
-                <input type="time" className='tid' name="startTid"></input>
-
-            </div>
-            <div className='cell'>
-
-                <input type="time" className='tid' name="sluttidtTid"></input>
-
-            </div>
-            <div className='cell'></div>
-            <div className='cell'></div>
-            <div className='overCell'>
-                <div className='midCell'></div>
-                <div className='midCell1'></div>
-            </div>
-            <div className='cell'>
-
-                <input type="checkbox" className='checkVanlig' name="Hellig" onClick={() => alert("8 timer")}></input>
-
-            </div>
-            <div className='cell'>
-
-                <input type="text" className='matNok' name='matNok'></input>&nbsp;
-                <label htmlFor="matNok">NOK</label>
-
-
-            </div>
-        </div>
-
-
-
-
-
-    )
-
+        <input className="inDate" name="Date" type="date" placeholder="dd/mm/yyyy" lang="no"></input>
+      </div>
+      <div className="cell">
+        <input className="oNrmesse" name="oNumer"></input>
+      </div>
+      <div className="cell">
+        <input className="oNrmesse" name="Messe"></input>
+      </div>
+      <div className="cell">
+        <input
+          type="checkbox"
+          className="checkVanlig"
+          name="Vanlig"
+          checked={props.isChecked}
+          onChange={() => props.goVanligDag(props.dayName, props.id)}
+        ></input>
+      </div>
+      <div className="cell">
+        <input type="time" className="tid" name="startTid"></input>
+      </div>
+      <div className="cell">
+        <input type="time" className="tid" name="sluttidtTid"></input>
+      </div>
+      <div className="cell">{props.isChecked && props.spiseTid}</div>
+      <div className="cell">{props.isChecked && props.fastLonn}</div>
+      <div className="overCell">
+        <div className="midCell"></div>
+        <div className="midCell1">{props.isChecked && props.overtidFull}</div>
+      </div>
+      <div className="cell">
+        <input type="checkbox" className="checkVanlig" name="Hellig" onClick={() => alert("8 timer")}></input>
+      </div>
+      <div className="cell">
+        <input type="text" className="matNok" name="matNok"></input>&nbsp;
+        <label htmlFor="matNok">NOK</label>
+      </div>
+    </div>
+  );
 }
 
 export default WeekDays;
