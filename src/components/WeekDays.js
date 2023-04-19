@@ -2,7 +2,7 @@ import "../styles/App.css";
 import uniqid from "uniqid";
 function WeekDays(props) {
   function fastLonn() {
-    if (props.isChecked) {
+    
       if (
         props.dayName === "Mandag" ||
         props.dayName === "Tirsdag" ||
@@ -15,21 +15,21 @@ function WeekDays(props) {
       } else if (props.dayName === "Lørdag" || props.dayName === "Søndag") {
         return "6.5";
       }
-    }
+    
   }
   function spiseTid() {
-    if (props.isChecked) {
+    
       if (props.dayName === "Lørdag" || props.dayName === "Søndag") {
         return "0.5";
       }
-    }
+    
   }
   function overtidFull() {
-    if (props.isChecked) {
+    
       if (props.dayName === "Lørdag" || props.dayName === "Søndag") {
         return "7"
       }
-    }
+    
   }
   return (
     <div className="rectangle">
@@ -46,6 +46,7 @@ function WeekDays(props) {
                 fastLonn: fastLonn(),
                 spiseTid: spiseTid(),
                 overtidFull: overtidFull(),
+                date: "",
               })
             }
           >
@@ -59,7 +60,7 @@ function WeekDays(props) {
           </button>
         )}
 
-        <input className="inDate" name="Date" type="date" placeholder="dd/mm/yyyy" lang="no"></input>
+        <input className="inDate" name="Date" type="date" placeholder="dd/mm/yyyy" lang="no" value={props.date} onChange={(e) => props.handleDayDate(props.dayName, props.id, e) }></input>
       </div>
       <div className="cell">
         <input className="oNrmesse" name="oNumer"></input>

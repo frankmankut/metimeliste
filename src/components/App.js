@@ -7,13 +7,13 @@ import uniqid from "uniqid";
 
 function App() {
   const [weekDays, setWeekDays] = useState([
-    { Mandag: [{ isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "" }] },
-    { Tirsdag: [{ isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "" }] },
-    { Onsdag: [{ isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "" }] },
-    { Torsdag: [{ isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "" }] },
-    { Fredag: [{ isChecked: false, id: uniqid(), fastLonn: "5.5", spiseTid: "", overtidFull: "" }] },
-    { Lørdag: [{ isChecked: false, id: uniqid(), fastLonn: "6.5", spiseTid: "0.5", overtidFull: "7" }] },
-    { Søndag: [{ isChecked: false, id: uniqid(), fastLonn: "6.5", spiseTid: "0.5", overtidFull: "7" }] },
+    { Mandag: [{ isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "", date: "" }] },
+    { Tirsdag: [{ isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "", date: "" }] },
+    { Onsdag: [{ isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "", date: "" }] },
+    { Torsdag: [{ isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "", date: "" }] },
+    { Fredag: [{ isChecked: false, id: uniqid(), fastLonn: "5.5", spiseTid: "", overtidFull: "", date: "" }] },
+    { Lørdag: [{ isChecked: false, id: uniqid(), fastLonn: "6.5", spiseTid: "0.5", overtidFull: "7", date: "" }] },
+    { Søndag: [{ isChecked: false, id: uniqid(), fastLonn: "6.5", spiseTid: "0.5", overtidFull: "7", date: "" }] },
   ]);
 
   function addDay(day, dayCell) {
@@ -58,6 +58,24 @@ function App() {
     setWeekDays(newWeekDays);
   }
 
+  function handleDayDate(day, id, value) {
+    const newWeekDays = weekDays.map((dayx) => {
+      if (Object.keys(dayx)[0] === day) {
+        const newWeekDay = Object.values(dayx)[0].map((dayy) => {
+          if (dayy.id === id){
+            return { ...dayy, date: value.target.value };
+          } else {
+            return dayy;
+          }
+        }) 
+        return { [day]: newWeekDay };
+      } else {
+        return dayx;
+      }
+    });
+    setWeekDays(newWeekDays);
+  }
+
   return (
     <div className="container">
       <MainInfo />
@@ -76,6 +94,8 @@ function App() {
               fastLonn={days.fastLonn}
               spiseTid={days.spiseTid}
               overtidFull={days.overtidFull}
+              date={days.date}
+              handleDayDate={handleDayDate}
             />
           );
         });
