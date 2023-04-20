@@ -7,13 +7,41 @@ import uniqid from "uniqid";
 
 function App() {
   const [weekDays, setWeekDays] = useState([
-    { Mandag: [{ isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "", date: "" }] },
-    { Tirsdag: [{ isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "", date: "" }] },
-    { Onsdag: [{ isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "", date: "" }] },
-    { Torsdag: [{ isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "", date: "" }] },
-    { Fredag: [{ isChecked: false, id: uniqid(), fastLonn: "5.5", spiseTid: "", overtidFull: "", date: "" }] },
-    { Lørdag: [{ isChecked: false, id: uniqid(), fastLonn: "6.5", spiseTid: "0.5", overtidFull: "7", date: "" }] },
-    { Søndag: [{ isChecked: false, id: uniqid(), fastLonn: "6.5", spiseTid: "0.5", overtidFull: "7", date: "" }] },
+    {
+      Mandag: [
+        { isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "", date: "", timeStart: "", timeStop: "", oNummer: "" },
+      ],
+    },
+    {
+      Tirsdag: [
+        { isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "", date: "", timeStart: "", timeStop: "", oNummer: "" },
+      ],
+    },
+    {
+      Onsdag: [
+        { isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "", date: "", timeStart: "", timeStop: "", oNummer: "" },
+      ],
+    },
+    {
+      Torsdag: [
+        { isChecked: false, id: uniqid(), fastLonn: "8", spiseTid: "", overtidFull: "", date: "", timeStart: "", timeStop: "", oNummer: "" },
+      ],
+    },
+    {
+      Fredag: [
+        { isChecked: false, id: uniqid(), fastLonn: "5.5", spiseTid: "", overtidFull: "", date: "", timeStart: "", timeStop: "", oNummer: "" },
+      ],
+    },
+    {
+      Lørdag: [
+        { isChecked: false, id: uniqid(), fastLonn: "6.5", spiseTid: "0.5", overtidFull: "7", date: "", timeStart: "", timeStop: "", oNummer: "" },
+      ],
+    },
+    {
+      Søndag: [
+        { isChecked: false, id: uniqid(), fastLonn: "6.5", spiseTid: "0.5", overtidFull: "7", date: "", timeStart: "", timeStop: "", oNummer: "" },
+      ],
+    },
   ]);
 
   function addDay(day, dayCell) {
@@ -44,12 +72,12 @@ function App() {
     const newWeekDays = weekDays.map((dayx) => {
       if (Object.keys(dayx)[0] === day) {
         const newWeekDay = Object.values(dayx)[0].map((dayy) => {
-          if (dayy.id === id){
-            return {...dayy, isChecked: dayy.isChecked === false ? true : false };
+          if (dayy.id === id) {
+            return { ...dayy, isChecked: dayy.isChecked === false ? true : false };
           } else {
             return dayy;
           }
-        }) 
+        });
         return { [day]: newWeekDay };
       } else {
         return dayx;
@@ -62,12 +90,66 @@ function App() {
     const newWeekDays = weekDays.map((dayx) => {
       if (Object.keys(dayx)[0] === day) {
         const newWeekDay = Object.values(dayx)[0].map((dayy) => {
-          if (dayy.id === id){
+          if (dayy.id === id) {
             return { ...dayy, date: value.target.value };
           } else {
             return dayy;
           }
-        }) 
+        });
+        return { [day]: newWeekDay };
+      } else {
+        return dayx;
+      }
+    });
+    setWeekDays(newWeekDays);
+  }
+
+  function handleTimeStart(day, id, value) {
+    const newWeekDays = weekDays.map((dayx) => {
+      if (Object.keys(dayx)[0] === day) {
+        const newWeekDay = Object.values(dayx)[0].map((dayy) => {
+          if (dayy.id === id) {
+            return { ...dayy, timeStart: value.target.value };
+          } else {
+            return dayy;
+          }
+        });
+        return { [day]: newWeekDay };
+      } else {
+        return dayx;
+      }
+    });
+    setWeekDays(newWeekDays);
+  }
+
+  function handleTimeStop(day, id, value) {
+    const newWeekDays = weekDays.map((dayx) => {
+      if (Object.keys(dayx)[0] === day) {
+        const newWeekDay = Object.values(dayx)[0].map((dayy) => {
+          if (dayy.id === id) {
+            return { ...dayy, timeStop: value.target.value };
+          } else {
+            return dayy;
+          }
+        });
+        return { [day]: newWeekDay };
+      } else {
+        return dayx;
+      }
+    });
+    setWeekDays(newWeekDays);
+  }
+
+  function keepONummer(day, id, value) {
+    const newWeekDays = weekDays.map((dayx) => {
+      if (Object.keys(dayx)[0] === day) {
+        const newWeekDay = Object.values(dayx)[0].map((dayy) => {
+          if (dayy.id === id) {
+            return { ...dayy, oNummer: value.target.value };
+          } else {
+            return dayy;
+          }
+        });
         return { [day]: newWeekDay };
       } else {
         return dayx;
@@ -96,6 +178,12 @@ function App() {
               overtidFull={days.overtidFull}
               date={days.date}
               handleDayDate={handleDayDate}
+              timeStart={days.timeStart}
+              handleTimeStart={handleTimeStart}
+              timeStop={days.timeStop}
+              handleTimeStop={handleTimeStop}
+              oNummer={days.oNummer}
+              keepONummer={keepONummer}
             />
           );
         });
