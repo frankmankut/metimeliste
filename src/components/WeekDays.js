@@ -68,7 +68,7 @@ function WeekDays(props) {
         ></input>
       </div>
       <div className="cell">
-        <input className="oNrmesse" name="oNumer" value={props.oNummer} onChange={(e) => props.keepONummer(props.dayName, props.id, e)}></input>
+        <input className="oNrmesse" name="oNumer" ></input>
       </div>
       <div className="cell">
         <input className="oNrmesse" name="Messe"></input>

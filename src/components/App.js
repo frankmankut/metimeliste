@@ -165,7 +165,7 @@ function App() {
         return Object.values(day)[0].map((days) => {
           return (
             <WeekDays
-              key={uniqid()}
+              key={Object.values(day)[0].indexOf(days)}
               dayIndex={Object.values(day)[0].indexOf(days)}
               dayName={Object.keys(day)[0]}
               id={days.id}
